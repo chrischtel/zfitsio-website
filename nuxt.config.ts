@@ -15,5 +15,16 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+  modules: [
+    'nuxt-shiki'
+  ],
+  shiki: {
+    theme: {
+      light: 'github-light',
+      dark: 'github-dark'
+    },
+    langs: ['zig', 'bash', 'json']
   }
+  
 })
