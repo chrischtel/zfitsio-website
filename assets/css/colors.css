@@ -1,0 +1,33 @@
+/* assets/css/colors.css */
+:root {
+    /* Backgrounds */
+    --bg-primary: #FDF7F2;
+    --bg-secondary: #F5EDE6;
+    
+    /* Text */
+    --text-primary: #1A1612;
+    --text-secondary: #665E54;
+    --text-disabled: #B3ABA3;
+    
+    /* Accents */
+    --accent-primary: #F7A41D;
+    --accent-secondary: #E88D4D;
+    --accent-tertiary: #D4856A;
+    
+    /* UI */
+    --border-color: #8C847A;
+    --shadow-sm: 0 2px 4px rgba(26, 22, 18, 0.05);
+    --shadow-md: 0 4px 6px rgba(26, 22, 18, 0.07);
+  
+    /* Additional utility variables */
+    --header-height: 60px;
+    --sidebar-width: 280px;
+    --content-width: 768px;
+  }
+  
+  /* Dark theme - if you want to add it later */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* We'll implement dark theme colors later if needed */
+    }
+  }
