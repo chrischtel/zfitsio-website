@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Devlog {
+  id      String   @id @default(cuid())
+  title   String
+  content String
+  version String
+  date    DateTime @default(now())
+  tags    Tag[]
+}
+model Tag {
+  id       String   @id @default(cuid())
+  name     String
+  devlogId String
+  devlog   Devlog   @relation(fields: [devlogId], references: [id])
+}
