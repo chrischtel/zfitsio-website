@@ -63,7 +63,7 @@ export default defineNuxtConfig({
         '/devlogs'
       ]
     }
-  }
+  },
   // Add app config for theme
   appConfig: {
     theme: {
