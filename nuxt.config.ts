@@ -55,5 +55,11 @@ export default defineNuxtConfig({
     theme: {
       default: 'system'
     }
+  },
+  nitro: {
+    prerender: {
+      failOnError: false,
+      ignore: ['/']
+    }
   }
 })
