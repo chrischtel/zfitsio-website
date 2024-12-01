@@ -47,19 +47,27 @@ export default defineNuxtConfig({
       allow401WithoutAuth: true,
       enableGlobalAppMiddleware: false
     },
-    origin: process.env.NUXT_AUTH_ORIGIN,
+    origin: process.env.NODE_ENV === 'production' 
+      ? 'https://zfitsio.pages.dev'
+      : process.env.NUXT_AUTH_ORIGIN || 'http://localhost:3000',
     defaultProvider: 'github'
-  },
-  // Add app config for theme
-  appConfig: {
-    theme: {
-      default: 'system'
-    }
   },
   nitro: {
     prerender: {
       failOnError: false,
-      ignore: ['/']
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/docs',
+        '/examples',
+        '/devlogs'
+      ]
+    }
+  }
+  // Add app config for theme
+  appConfig: {
+    theme: {
+      default: 'system'
     }
   }
 })
