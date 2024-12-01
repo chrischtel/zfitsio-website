@@ -53,6 +53,10 @@ export default defineNuxtConfig({
     defaultProvider: 'github'
   },
   nitro: {
+    preset: 'cloudflare-pages',
+    output: {
+      dir: '.output/public'
+    },
     prerender: {
       failOnError: false,
       crawlLinks: true,
